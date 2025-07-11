@@ -13,8 +13,9 @@ int main(int argc, char** argv) {
 
     // Parameters
     const int count = 1024; // elements per process
-    const int warmup_iters = 5;
+    const int warmup_iters = 1;
     const int timed_iters = 20;
+    bool print_intermediate_steps = false;
 
     std::vector<double> sendbuf(count * size, static_cast<double>(rank));
     std::vector<double> recvbuf(count * size);
@@ -29,7 +30,7 @@ int main(int argc, char** argv) {
         auto end = std::chrono::high_resolution_clock::now();
         double elapsed = std::chrono::duration<double>(end - start).count();
         warmup_total_time += elapsed;
-        if (rank == 0) {
+        if (rank == 0 && print_intermediate_steps) {
             std::cout << "Warmup Iteration " << i+1 << ": " << elapsed << " seconds" << std::endl;
         }
     }
@@ -44,7 +45,7 @@ int main(int argc, char** argv) {
         auto end = std::chrono::high_resolution_clock::now();
         double elapsed = std::chrono::duration<double>(end - start).count();
         total_time += elapsed;
-        if (rank == 0) {
+        if (rank == 0 && print_intermediate_steps) {
             std::cout << "Iteration " << i+1 << ": " << elapsed << " seconds" << std::endl;
         }
     }
