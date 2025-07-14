@@ -11,8 +11,8 @@ Reservation: shortqos
 Nodes: 2
 PE 0: MPICH processor detected:
 PE 0:   AMD Rome (23:49:0) (family:model:stepping)
-MPI VERSION    : CRAY MPICH version 8.1.23.14 (ANL base 3.4a2)
-MPI BUILD INFO : Tue Nov 29 12:35 2022 (git hash 210ae8b) (CH4)
+MPI VERSION    : CRAY MPICH version 8.1.27.26 (ANL base 3.4a2)
+MPI BUILD INFO : Thu Aug 10 23:55 2023 (git hash 55e934a) (CH4)
 PE 0: MPICH environment settings =====================================
 PE 0:   MPICH_ENV_DISPLAY                              = 1
 PE 0:   MPICH_VERSION_DISPLAY                          = 1
@@ -33,12 +33,17 @@ PE 0:   MPICH_INTERNAL_MEM_AFFINITY                    = SYS_DEFAULT
 PE 0:   MPICH_NO_BUFFER_ALIAS_CHECK                    = 0
 PE 0:   MPICH_COLL_SYNC                                = 0
 PE 0:   MPICH_SINGLE_HOST_ENABLED                        = 1
+PE 0:   MPICH_USE_PERSISTENT_TOPS                      = 0
+PE 0:   MPICH_DISABLE_PERSISTENT_RECV_TOPS             = 0
+PE 0:   MPICH_MAX_TOPS_COUNTERS                        = 0
+PE 0:   MPICH_ENABLE_ACTIVE_WAIT                       = 0
 PE 0: MPICH/RMA environment settings =================================
 PE 0:   MPICH_RMA_MAX_PENDING                          = 128
 PE 0:   MPICH_RMA_SHM_ACCUMULATE                       = 0
 PE 0: MPICH/Dynamic Process Management environment settings ==========
-PE 0:   MPICH_DPM_DIR                                  = 2297232
+PE 0:   MPICH_DPM_DIR                                  = 
 PE 0:   MPICH_LOCAL_SPAWN_SERVER                       = 0
+PE 0:   MPICH_SPAWN_USE_RANKPOOL                       = 0
 PE 0: MPICH/SMP environment settings =================================
 PE 0:   MPICH_SMP_SINGLE_COPY_MODE                     = XPMEM
 PE 0:   MPICH_SMP_SINGLE_COPY_SIZE                     = 8192
@@ -76,6 +81,8 @@ PE 0:   MPICH_GATHERV_SHORT_MSG                        = 131072
 PE 0:   MPICH_GATHERV_MIN_COMM_SIZE                    = 64
 PE 0:   MPICH_GATHERV_MAX_TMP_SIZE                     = 536870912
 PE 0:   MPICH_GATHERV_SYNC_FREQ                        = 16
+PE 0:   MPICH_IGATHERV_MIN_COMM_SIZE                   = 1000
+PE 0:   MPICH_IGATHERV_SYNC_FREQ                       = 100
 PE 0:   MPICH_IGATHERV_RAND_COMMSIZE                   = 2048
 PE 0:   MPICH_IGATHERV_RAND_RECVLIST                   = 0
 PE 0:   MPICH_SCATTERV_SHORT_MSG                       = 2048-8192
@@ -85,7 +92,10 @@ PE 0:   MPICH_SCATTERV_SYNC_FREQ                       = 16
 PE 0:   MPICH_SCATTERV_SYNCHRONOUS                     = 0
 PE 0:   MPICH_ALLREDUCE_MAX_SMP_SIZE                   = 262144
 PE 0:   MPICH_ALLREDUCE_BLK_SIZE                       = 716800
+PE 0:   MPICH_GPU_ALLGATHER_VSHORT_MSG_ALGORITHM       = 1
 PE 0:   MPICH_GPU_ALLREDUCE_USE_KERNEL                 = 0
+PE 0:   MPICH_GPU_COLL_STAGING_BUF_SIZE                = 1048576
+PE 0:   MPICH_GPU_ALLREDUCE_STAGING_THRESHOLD          = 256
 PE 0:   MPICH_ALLREDUCE_NO_SMP                         = 0
 PE 0:   MPICH_REDUCE_NO_SMP                            = 0
 PE 0:   MPICH_REDUCE_SCATTER_COMMUTATIVE_LONG_MSG_SIZE = 524288
@@ -117,18 +127,18 @@ PE 0:   rank 0 required = single, was provided = single
 Running All-to-All Benchmark with 256 processes.
 Each process will send and receive 1024 elements.
 Warmup iterations: 1, Timed iterations: 10
-Warmup Iteration 1: 11.0106 seconds
-Iteration 1: 0.00614863 seconds
-Iteration 2: 0.00616778 seconds
-Iteration 3: 0.00579788 seconds
-Iteration 4: 0.00579559 seconds
-Iteration 5: 0.00578953 seconds
-Iteration 6: 0.00576166 seconds
-Iteration 7: 0.00579354 seconds
-Iteration 8: 0.00579313 seconds
-Iteration 9: 0.00578 seconds
-Iteration 10: 0.00578986 seconds
-Average warmup time per iteration: 11.0106 seconds
+Warmup Iteration 1: 10.9898 seconds
+Iteration 1: 0.00600491 seconds
+Iteration 2: 0.0061444 seconds
+Iteration 3: 0.005757 seconds
+Iteration 4: 0.00579046 seconds
+Iteration 5: 0.00578075 seconds
+Iteration 6: 0.00579037 seconds
+Iteration 7: 0.00576799 seconds
+Iteration 8: 0.00577946 seconds
+Iteration 9: 0.00577111 seconds
+Iteration 10: 0.00575053 seconds
+Average warmup time per iteration: 10.9898 seconds
 Warmup stddev: 0 seconds
-Average timed iteration: 0.00586176 seconds
-Timed stddev: 0.000156652 seconds
+Average timed iteration: 0.0058337 seconds
+Timed stddev: 0.000131814 seconds
