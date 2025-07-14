@@ -1,0 +1,19 @@
+Reservation: z19-upgrade2025
+Running All-to-All Benchmark with 16384 processes.
+Each process will send and receive 1024 elements.
+Warmup iterations: 1, Timed iterations: 10
+Warmup Iteration 1: 1518.39 seconds
+Iteration 1: 1.11244 seconds
+Iteration 2: 1.3228 seconds
+Iteration 3: 1.10956 seconds
+Iteration 4: 1.18839 seconds
+Iteration 5: 1.17069 seconds
+Iteration 6: 1.27831 seconds
+Iteration 7: 1.25712 seconds
+Iteration 8: 1.09648 seconds
+Iteration 9: 1.27726 seconds
+Iteration 10: 1.20644 seconds
+Average warmup time per iteration: 1518.39 seconds
+Warmup stddev: 0 seconds
+Average timed iteration: 1.20195 seconds
+Timed stddev: 0.0802791 seconds

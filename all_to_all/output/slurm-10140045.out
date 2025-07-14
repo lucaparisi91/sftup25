@@ -1,0 +1,18 @@
+Running All-to-All Benchmark with 16384 processes.
+Each process will send and receive 1024 elements.
+Warmup iterations: 1, Timed iterations: 10
+Warmup Iteration 1: 2077.91 seconds
+Iteration 1: 0.82673 seconds
+Iteration 2: 0.80966 seconds
+Iteration 3: 0.831738 seconds
+Iteration 4: 0.806469 seconds
+Iteration 5: 0.810612 seconds
+Iteration 6: 0.815338 seconds
+Iteration 7: 0.842666 seconds
+Iteration 8: 0.891812 seconds
+Iteration 9: 0.815979 seconds
+Iteration 10: 0.815797 seconds
+Average warmup time per iteration: 2077.91 seconds
+Warmup stddev: 0 seconds
+Average timed iteration: 0.82668 seconds
+Timed stddev: 0.025476 seconds
