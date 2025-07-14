@@ -21,10 +21,33 @@ int main(int argc, char** argv) {
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
     // Parameters
-    const int count = 1024; // elements per process
-    const int warmup_iters = 10;
-    const int timed_iters = 20;
-    bool print_intermediate_steps = false;
+    int count = 1024; // elements per process (default)
+    const int warmup_iters = 1;
+    const int timed_iters = 10;
+    bool print_intermediate_steps = true;
+
+
+
+
+    // Check command line arguments for count
+    if (argc > 1) {
+        try {
+            count = std::stoi(argv[1]);
+        } catch (...) {
+            if (rank == 0) {
+                std::cerr << "Invalid count argument, using default: " << count << std::endl;
+            }
+        }
+    }
+
+    if (rank == 0 )
+    {
+        std::cout << "Running All-to-All Benchmark with " << size << " processes." << std::endl;
+        std::cout << "Each process will send and receive " << count << " elements." << std::endl;
+        std::cout << "Warmup iterations: " << warmup_iters << ", Timed iterations: " << timed_iters << std::endl;
+        
+    }
+
 
     std::vector<double> sendbuf(count * size, static_cast<double>(rank));
     std::vector<double> recvbuf(count * size);
