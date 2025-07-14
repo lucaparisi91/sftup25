@@ -1,0 +1,134 @@
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.3.3 => PrgEnv-cray/8.4.0
+  2) cce/15.0.0 => cce/16.0.1
+  3) cray-libsci/22.12.1.1 => cray-libsci/23.09.1.1
+  4) cray-mpich/8.1.23 => cray-mpich/8.1.27
+  5) craype/2.7.19 => craype/2.7.23
+  6) perftools-base/22.12.0 => perftools-base/23.09.0
+
+Reservation: shortqos
+Nodes: 2
+PE 0: MPICH processor detected:
+PE 0:   AMD Rome (23:49:0) (family:model:stepping)
+MPI VERSION    : CRAY MPICH version 8.1.23.14 (ANL base 3.4a2)
+MPI BUILD INFO : Tue Nov 29 12:35 2022 (git hash 210ae8b) (CH4)
+PE 0: MPICH environment settings =====================================
+PE 0:   MPICH_ENV_DISPLAY                              = 1
+PE 0:   MPICH_VERSION_DISPLAY                          = 1
+PE 0:   MPICH_ABORT_ON_ERROR                           = 0
+PE 0:   MPICH_CPUMASK_DISPLAY                          = 0
+PE 0:   MPICH_STATS_DISPLAY                            = 0
+PE 0:   MPICH_RANK_REORDER_METHOD                      = 1
+PE 0:   MPICH_RANK_REORDER_DISPLAY                     = 0
+PE 0:   MPICH_MEMCPY_MEM_CHECK                         = 0
+PE 0:   MPICH_USE_SYSTEM_MEMCPY                        = 0
+PE 0:   MPICH_OPTIMIZED_MEMCPY                         = 1
+PE 0:   MPICH_ALLOC_MEM_PG_SZ                          = 4096
+PE 0:   MPICH_ALLOC_MEM_POLICY                         = PREFERRED
+PE 0:   MPICH_ALLOC_MEM_AFFINITY                       = SYS_DEFAULT
+PE 0:   MPICH_MALLOC_FALLBACK                          = 0
+PE 0:   MPICH_MEM_DEBUG_FNAME                          = 
+PE 0:   MPICH_INTERNAL_MEM_AFFINITY                    = SYS_DEFAULT
+PE 0:   MPICH_NO_BUFFER_ALIAS_CHECK                    = 0
+PE 0:   MPICH_COLL_SYNC                                = 0
+PE 0:   MPICH_SINGLE_HOST_ENABLED                        = 1
+PE 0: MPICH/RMA environment settings =================================
+PE 0:   MPICH_RMA_MAX_PENDING                          = 128
+PE 0:   MPICH_RMA_SHM_ACCUMULATE                       = 0
+PE 0: MPICH/Dynamic Process Management environment settings ==========
+PE 0:   MPICH_DPM_DIR                                  = 2297232
+PE 0:   MPICH_LOCAL_SPAWN_SERVER                       = 0
+PE 0: MPICH/SMP environment settings =================================
+PE 0:   MPICH_SMP_SINGLE_COPY_MODE                     = XPMEM
+PE 0:   MPICH_SMP_SINGLE_COPY_SIZE                     = 8192
+PE 0:   MPICH_SHM_PROGRESS_MAX_BATCH_SIZE              = 8
+PE 0: MPICH/OFI environment settings =================================
+PE 0:   MPICH_OFI_USE_PROVIDER                         = verbs;ofi_rxm
+PE 0:   MPICH_OFI_VERBOSE                              = 0
+PE 0:   MPICH_OFI_NIC_VERBOSE                          = 0
+PE 0:   FI_OFI_RXM_SAR_LIMIT                           = 262144
+PE 0:   FI_OFI_RXM_BUFFER_SIZE                         = 16384
+PE 0:   FI_OFI_RXM_RX_SIZE                             = 4096
+PE 0:   FI_OFI_RXM_USE_SRX                             = 1
+PE 0:   FI_VERBS_PREFER_XRC                            = 1
+PE 0:   FI_VERBS_MIN_RNR_TIMER                         = 6
+PE 0:   MPICH_OFI_XRCD_BASE_DIR                        = /tmp
+PE 0:   MPICH_OFI_NIC_POLICY                           = BLOCK
+PE 0:   MPICH_OFI_NIC_MAPPING                          = NULL
+PE 0:   MPICH_OFI_NUM_NICS                             = NULL
+PE 0:   MPICH_CH4_OFI_ENABLE_CONTROL_AUTO_PROGRESS     = -1
+PE 0:   MPICH_CH4_OFI_ENABLE_DATA_AUTO_PROGRESS        = -1
+PE 0:   MPICH_OFI_RMA_STARTUP_CONNECT                  = 0
+PE 0:   MPICH_OFI_SKIP_NIC_SYMMETRY_TEST               = 0
+PE 0:   MPICH_OFI_STARTUP_CONNECT                      = 0
+PE 0: MPICH/COLLECTIVE environment settings ==========================
+PE 0:   MPICH_COLL_OPT_OFF                             = 0
+PE 0:   MPICH_BCAST_ONLY_TREE                          = 1
+PE 0:   MPICH_BCAST_INTERNODE_RADIX                    = 4
+PE 0:   MPICH_BCAST_INTRANODE_RADIX                    = 4
+PE 0:   MPICH_ALLTOALL_SHORT_MSG                       = 64-512
+PE 0:   MPICH_ALLTOALL_SYNC_FREQ                       = 1-24
+PE 0:   MPICH_ALLTOALLV_THROTTLE                       = 8
+PE 0:   MPICH_ALLGATHER_VSHORT_MSG                     = 1024-4096
+PE 0:   MPICH_ALLGATHERV_VSHORT_MSG                    = 1024-4096
+PE 0:   MPICH_GATHERV_SHORT_MSG                        = 131072
+PE 0:   MPICH_GATHERV_MIN_COMM_SIZE                    = 64
+PE 0:   MPICH_GATHERV_MAX_TMP_SIZE                     = 536870912
+PE 0:   MPICH_GATHERV_SYNC_FREQ                        = 16
+PE 0:   MPICH_IGATHERV_RAND_COMMSIZE                   = 2048
+PE 0:   MPICH_IGATHERV_RAND_RECVLIST                   = 0
+PE 0:   MPICH_SCATTERV_SHORT_MSG                       = 2048-8192
+PE 0:   MPICH_SCATTERV_MIN_COMM_SIZE                   = 64
+PE 0:   MPICH_SCATTERV_MAX_TMP_SIZE                    = 536870912
+PE 0:   MPICH_SCATTERV_SYNC_FREQ                       = 16
+PE 0:   MPICH_SCATTERV_SYNCHRONOUS                     = 0
+PE 0:   MPICH_ALLREDUCE_MAX_SMP_SIZE                   = 262144
+PE 0:   MPICH_ALLREDUCE_BLK_SIZE                       = 716800
+PE 0:   MPICH_GPU_ALLREDUCE_USE_KERNEL                 = 0
+PE 0:   MPICH_ALLREDUCE_NO_SMP                         = 0
+PE 0:   MPICH_REDUCE_NO_SMP                            = 0
+PE 0:   MPICH_REDUCE_SCATTER_COMMUTATIVE_LONG_MSG_SIZE = 524288
+PE 0:   MPICH_REDUCE_SCATTER_MAX_COMMSIZE              = 1000
+PE 0:   MPICH_SHARED_MEM_COLL_OPT                      = 1
+PE 0:   MPICH_SHARED_MEM_COLL_NCELLS                   = 8
+PE 0:   MPICH_SHARED_MEM_COLL_CELLSZ                   = 256
+PE 0: MPICH MPIIO environment settings ===============================
+PE 0:   MPICH_MPIIO_HINTS_DISPLAY                      = 0
+PE 0:   MPICH_MPIIO_HINTS                              = NULL
+PE 0:   MPICH_MPIIO_ABORT_ON_RW_ERROR                  = disable
+PE 0:   MPICH_MPIIO_CB_ALIGN                           = 2
+PE 0:   MPICH_MPIIO_DVS_MAXNODES                       = -1
+PE 0:   MPICH_MPIIO_AGGREGATOR_PLACEMENT_DISPLAY       = 0
+PE 0:   MPICH_MPIIO_AGGREGATOR_PLACEMENT_STRIDE        = -1
+PE 0:   MPICH_MPIIO_MAX_NUM_IRECV                      = 50
+PE 0:   MPICH_MPIIO_MAX_NUM_ISEND                      = 50
+PE 0:   MPICH_MPIIO_MAX_SIZE_ISEND                     = 10485760
+PE 0:   MPICH_MPIIO_OFI_STARTUP_CONNECT                = disable
+PE 0:   MPICH_MPIIO_OFI_STARTUP_NODES_AGGREGATOR        = 2
+PE 0: MPICH MPIIO statistics environment settings ====================
+PE 0:   MPICH_MPIIO_STATS                              = 0
+PE 0:   MPICH_MPIIO_TIMERS                             = 0
+PE 0:   MPICH_MPIIO_WRITE_EXIT_BARRIER                 = 1
+PE 0: MPICH Thread Safety settings ===================================
+PE 0:   MPICH_ASYNC_PROGRESS                           = 0
+PE 0:   MPICH_OPT_THREAD_SYNC                          = 1
+PE 0:   rank 0 required = single, was provided = single
+Running All-to-All Benchmark with 256 processes.
+Each process will send and receive 1024 elements.
+Warmup iterations: 1, Timed iterations: 10
+Warmup Iteration 1: 11.0106 seconds
+Iteration 1: 0.00614863 seconds
+Iteration 2: 0.00616778 seconds
+Iteration 3: 0.00579788 seconds
+Iteration 4: 0.00579559 seconds
+Iteration 5: 0.00578953 seconds
+Iteration 6: 0.00576166 seconds
+Iteration 7: 0.00579354 seconds
+Iteration 8: 0.00579313 seconds
+Iteration 9: 0.00578 seconds
+Iteration 10: 0.00578986 seconds
+Average warmup time per iteration: 11.0106 seconds
+Warmup stddev: 0 seconds
+Average timed iteration: 0.00586176 seconds
+Timed stddev: 0.000156652 seconds
